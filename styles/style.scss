@@ -1,0 +1,166 @@
+
+$bgColor : #090b1a;
+$cardColor: #1b1938;
+$overlayColor: rgba(130, 15, 202, 0.438);
+$textColor1: hsl(0, 0%, 100%);
+$textColor2: hsla(0, 0%, 100%, 0.75);
+$textColor3: hsla(0, 0%, 100%, 0.6);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    font-family: "Inter", "Lexend Deca";
+    background-color:  $bgColor;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: $textColor1;
+
+
+    .card-holder {
+        display: flex;
+        flex-direction: column;
+        background-color: $cardColor;
+        width: 300px;
+       border-radius: 15px;
+       overflow: hidden;
+       font-family: "Inter";
+    
+      
+
+
+        .bannerpic {
+            height: 200px;
+            width: 100%;
+            background: url(../images/image-header-mobile.jpg);
+            background-size: 100% 100%;
+            position: relative;
+            inset: 0;
+
+            &::after {
+                content: "";
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background: $overlayColor ;
+            }
+        }
+
+
+        .card-content {
+            padding: 30px;
+            text-align: center;
+            
+            h1 {
+            margin-bottom: 20px;    
+            font-size: 25px;
+            }
+
+            p {
+                font-size: 14px;
+                color: $textColor2;
+                font-family: "Inter";
+                line-height: 1.5;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+
+            span {
+                color: hsl(277, 64%, 61%);
+            }
+
+            .stats {
+              .stat1, .stat2, .stat3 {
+                color: $textColor1;
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 1;
+                padding-block: 10px;
+                
+              }
+
+
+                p {
+                    font-family: "Lexend Deca";
+                    font-size: 12px;
+                  
+                    span {
+                        font-weight: 400;
+                        color: $textColor3;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+footer {
+    padding: 20px;
+    .attribution {
+    font-size: 11px;
+        text-align: center;
+
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width: 850px) {
+    main {
+        .card-holder {
+            flex-direction: row-reverse;
+            width: 1000px;
+            height: 400px;
+
+            .bannerpic {
+                height: 100%;
+           
+            }
+
+            .card-content {
+                padding: 60px;
+                text-align: left;
+                h1 {
+                    font-size: 30px;
+                    width: 80%;
+                }
+                p{
+                    line-height: 1.8;
+                    width: 80%;
+                    margin-bottom: 50px;
+                }
+                .stats {
+                    display: flex;
+                    flex-direction: row;
+
+                    p.stat1,p.stat2,p.stat3 {
+                        font-size: 20px;
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

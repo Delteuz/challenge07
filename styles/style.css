@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: "Inter", "Lexend Deca";
+  background-color: #090b1a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: hsl(0deg, 0%, 100%);
+}
+main .card-holder {
+  display: flex;
+  flex-direction: column;
+  background-color: #1b1938;
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  font-family: "Inter";
+}
+main .card-holder .bannerpic {
+  height: 200px;
+  width: 100%;
+  background: url(../images/image-header-mobile.jpg);
+  background-size: 100% 100%;
+  position: relative;
+  inset: 0;
+}
+main .card-holder .bannerpic::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(130, 15, 202, 0.438);
+}
+main .card-holder .card-content {
+  padding: 30px;
+  text-align: center;
+}
+main .card-holder .card-content h1 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+main .card-holder .card-content p {
+  font-size: 14px;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: "Inter";
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+main .card-holder .card-content span {
+  color: hsl(277deg, 64%, 61%);
+}
+main .card-holder .card-content .stats .stat1, main .card-holder .card-content .stats .stat2, main .card-holder .card-content .stats .stat3 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+  padding-block: 10px;
+}
+main .card-holder .card-content .stats p {
+  font-family: "Lexend Deca";
+  font-size: 12px;
+}
+main .card-holder .card-content .stats p span {
+  font-weight: 400;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 20px;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media screen and (min-width: 850px) {
+  main .card-holder {
+    flex-direction: row-reverse;
+    width: 1000px;
+    height: 400px;
+  }
+  main .card-holder .bannerpic {
+    height: 100%;
+  }
+  main .card-holder .card-content {
+    padding: 60px;
+    text-align: left;
+  }
+  main .card-holder .card-content h1 {
+    font-size: 30px;
+    width: 80%;
+  }
+  main .card-holder .card-content p {
+    line-height: 1.8;
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  main .card-holder .card-content .stats {
+    display: flex;
+    flex-direction: row;
+  }
+  main .card-holder .card-content .stats p.stat1, main .card-holder .card-content .stats p.stat2, main .card-holder .card-content .stats p.stat3 {
+    font-size: 20px;
+  }
+  main .card-holder .card-content .stats p.stat1 span, main .card-holder .card-content .stats p.stat2 span, main .card-holder .card-content .stats p.stat3 span {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=style.css.map */
